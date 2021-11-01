@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Co2 Emissions - Project 2</title> 
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+
+</head>
+
+<body>
+
+<!-- navbar at the top -->
+<div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="/map">CO2 Emitter Map</a>
+    <a href="/about">About This Project</a>
+</div> 
+
+<!--container class for image, etc. NOTE: text is not responsive-->
+<div class="container">
+    <div class="hero"><h1><b>CO2 EMISSIONS 1999 - 2014</b></h1>
+            <p>Use the charts below to learn more!</p>
+    </div> 
+
+<!--div to hold a chart -->
+  <div id="linechart"></div> 
+
+<!--div to hold a stacked bar -->
+<div id="stackedbar"></div> 
+
+<!--div to hold a map -->
+  <div id="map"></div> 
+
+<!--links to other data sites at the bottom of the page -->
+<div class="container center">
+    <br>
+    <h2>Links to additional CO2 data sources</h2> 
+
+<button class="button"><a href="https://www.wri.org/insights/interactive-chart-shows-changes-worlds-top-10-emitters" target="_blank" >Top 10 Countries by Emissions</a></button>
+<button class="button"><a href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions" target="_blank" >Greenhouse Gas Emissions</a></button>
+<button class="button"><a href="https://eciu.net/netzerotracker" target="_blank" >Countries and Emission Reduction Activity</a></button>
+</div>
+
+
+
+  <!-- D3 JavaScript -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- API key -->
+  <script type="text/javascript" src="../../static/js/config.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="../../static/js/CO2_app.js"></script>
+  <!--<script src="static/js/app.js"></script> -->
+
+</body>
+
+</html> 

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Co2 Emissions - Map</title> 
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+ 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create two unequal columns that floats next to each other */
+    .column {
+      float: left;
+      padding: 25px;
+      height: 800px; 
+    }
+    
+    .left {
+      width: 15%;
+    }
+    
+    .right {
+      width: 85%;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    </style>
+</head>
+
+<body>
+
+<!-- navbar at the top -->
+<div class="topnav">
+  <a href="/">Home</a>
+  <a class="active" href="map.html">CO2 Emitter Map</a>
+  <a href="/about">About This Project</a>
+</div> 
+<!--container class for image, etc. NOTE: the text is not responsive-->
+    <div class="heromap"><h1><b>CO2 Emissions Map</b></h1>
+    </div> 
+
+
+    <hr/>
+
+    <!--div to hold a map -->
+    <div class="row">
+        <div class="column left" style="background-color:rgb(226, 52, 52);">
+          <br/>
+          <h1><center>About CO2</center></h2>
+          <br/>
+          <p> While CO2 is part of life — plants need it to grow — too much can be a bad thing, leading to measurable increases in things like global warming</p>
+          <!-- <br/> -->
+          <p>Extra CO2 in the atmosphere increases the greenhouse effect as more thermal energy is trapped by the atmosphere, causing the planet to become warmer than it would be naturally</p>
+          <!-- <br/> -->
+          <p>The U.S. EPA considers CO2 to be a pollutant because of it's role in propagating climate change, not because of any direct health effects</p>
+          <!-- <br/> -->
+          <p>The annual rate of increase in atmospheric CO2 over the past 60 years is about 100 times faster than previous natural increases, such as those that occurred at the end of the last ice age (11,000-17,000 years ago)</p>
+          <!-- <br/> -->
+          <p><b>The Dirty 30:</b>  87% of all human-produced CO2 emissions come from the burning of fossil fuels like coal, natural gas and oil - with approximately 90% of this from 30 countries</p>
+        </div>
+        <div class="column right" style="background-color:#bbb;">
+            <div id="map">
+
+            </div>
+        </div>
+    </div>
+   
+ 
+<hr/>
+
+<!--data links at the bottom of the page -->
+
+<div class="container center">
+    <br>
+    <h2>Links to additional CO2 data sources</h2> 
+
+<button class="button"><a href="https://www.wri.org/insights/interactive-chart-shows-changes-worlds-top-10-emitters" target="_blank" >Top 10 Countries by Emissions</a></button>
+<button class="button"><a href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions" target="_blank" >Greenhouse Gas Emissions</a></button>
+<button class="button"><a href="https://eciu.net/netzerotracker" target="_blank" >Countries and Emission Reduction Activity</a></button>
+<br/>
+<!-- <hr/> -->
+</div>
+
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+  <!-- D3 JavaScript -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- API key -->
+  <script type="text/javascript" src="../../static/js/config.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="../static/js/map.js"></script>
+  <!-- Our JavaScript -->
+  <!-- <script type="text/javascript" src="logic.js"></script>
+  <script src="app.js"></script> -->
+  <script src="../static/js/CO2_app.js"></script>
+</body>
+
+</html> 
