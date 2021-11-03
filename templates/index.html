@@ -8,12 +8,43 @@
   <title>Co2 Emissions - Project 2</title> 
 
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="../static/style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      padding: 25px;
+      height: 650px; 
+    }
+    
+    .left {
+      width: 50%;
+    }
+    
+    .right {
+      width: 50%;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    </style>
 
 </head>
 
@@ -21,26 +52,39 @@
 
 <!-- navbar at the top -->
 <div class="topnav">
-    <a class="active" href="index.html">Home</a>
-    <a href="/map">CO2 Emitter Map</a>
-    <a href="/about">About This Project</a>
+  <a class="active" href="index.html">Home</a>
+  <a href="/map">CO2 Emitter Map</a>
+  <a href="/about">About This Project</a>
 </div> 
 
 <!--container class for image, etc. NOTE: text is not responsive-->
 <div class="container">
-    <div class="hero"><h1><b>CO2 EMISSIONS 1999 - 2014</b></h1>
-            <p>Use the charts below to learn more!</p>
-    </div> 
+  <div class="hero"><h1><b>CO2 EMISSIONS 1999 - 2014</b></h1>
+    <p>See the charts below and click on our other pages to learn more!</p>
+  </div> 
 
-<!--div to hold a chart -->
-  <div id="linechart"></div> 
+<hr/>
 
-<!--div to hold a stacked bar -->
-<div id="stackedbar"></div> 
 
-<!--div to hold a map -->
-  <div id="map"></div> 
+<div class="row">
 
+  <!--div to hold a linechart -->
+  <div class="column left" style="background-color:lightgray;">
+     <h1>Increasing CO2 Emissions by Year</h1>
+     <div id="linechart">
+     </div>
+    </div>
+
+ <!-- div to hold a stacked bar -->
+  <div class="column right" style="background-color:darkgray;">
+    <h1>CO2 Emissions by Country and Type</h1>  
+    <div id="insertStackedBar"> 
+    </div>
+  </div>
+</div>
+
+
+<hr/>
 <!--links to other data sites at the bottom of the page -->
 <div class="container center">
     <br>
@@ -52,17 +96,20 @@
 </div>
 
 
-
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <!-- D3 JavaScript -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <!-- Plotly -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <!-- API key -->
-  <script type="text/javascript" src="../../static/js/config.js"></script>
   <!-- Our JavaScript -->
-  <script type="text/javascript" src="../../static/js/CO2_app.js"></script>
-  <!--<script src="static/js/app.js"></script> -->
+  <script type="text/javascript" src="../static/js/index.js"></script>
+  <!-- <script src="app.js"></script> -->
+  <script type="text/javascript" src="../static/js/config.js"></script>
+  <!-- Our JavaScript -->
+
+
 
 </body>
-
 </html> 
+
+
